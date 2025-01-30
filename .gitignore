@@ -1,0 +1,27 @@
+# Ignore AWS credentials and kubeconfig
+~/.aws/
+~/.kube/
+.env
+
+# Ignore Terraform state files 
+*.tfstate
+*.tfstate.backup
+
+# Ignore Helm and Kubernetes temp files
+charts/
+*.tgz
+*.lock
+
+# Ignore compiled files and logs
+*.log
+*.out
+*.class
+*.DS_Store
+
+# Ignore Python virtual environments (if using Python)
+venv/
+__pycache__/
+
+# Ignore Docker-related files
+*.dockerignore
+docker-compose.override.yml
