@@ -6,6 +6,9 @@
 # Ignore Terraform state files 
 *.tfstate
 *.tfstate.backup
+# Ignore Terraform cache files
+.terraform/
+.terraform.lock.hcl
 
 # Ignore Helm and Kubernetes temp files
 charts/
@@ -18,7 +21,7 @@ charts/
 *.class
 *.DS_Store
 
-# Ignore Python virtual environments (if using Python)
+# Ignore Python virtual environments
 venv/
 __pycache__/
 
@@ -32,12 +35,20 @@ awscliv2.zip
 # Ignore binaries and executables
 kubectl
 
-# Ignore user-specific configurations
+# Ignore system config files
 .bash_history
 .aws/
+.azure/
 .gitconfig
 .local/
 .cache/
+.bash_logout
+.bashrc
+.docker/
+.lesshst
+.motd_shown
+.profile
+.sudo_as_admin_successful
 
 # Ignore AWS cli install
 awscliv2.zip
