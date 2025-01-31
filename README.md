@@ -1,7 +1,7 @@
 # AWS Kubernetes Infrastructure
 
 ## **Project Overview**
-This repository demonstrates a fully automated, scalable Kubernetes infrastructure** deployed on AWS. It is designed as **practical cloud-native architecture serving as a template for future use cases, leveraging:
+This repository demonstrates a fully automated, scalable Kubernetes infrastructure deployed on AWS. It is designed as practical cloud-native architecture serving as a template for future use cases, leveraging:
 
 - **Terraform** for Infrastructure as Code (IaC)
 - **AWS EKS** (Elastic Kubernetes Service) for cluster management
