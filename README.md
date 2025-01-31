@@ -41,14 +41,14 @@ This is not intended reductively as a local development playground—it is a int
    - Integrate with Prometheus for log ingestion and alerting.
 
 ---
-## **How to Set Up Locally**
-1. **Clone the Repository**
+## **How to set up locally**
+1. **Clone the repository**
    ```sh
    git clone https://github.com/LcncRoot/aws-kubernetes-infra.git
    cd aws-kubernetes-infra
    ```
 
-2. **Install Required Tools**
+2. **Install required tools**
    ```sh
    sudo apt install awscli terraform kubectl helm -y
    ```
@@ -58,28 +58,32 @@ This is not intended reductively as a local development playground—it is a int
    aws configure
    ```
 
-4. **Deploy Infrastructure with Terraform**
+4. **Deploy infrastructure with Terraform**
    ```sh
    cd terraform
    terraform init
    terraform apply
    ```
 
-5. **Deploy Kubernetes Apps via Helm** *(Once cluster is stable)*
+5. **Deploy Kubernetes apps via Helm** *(Once cluster is stable)*
    ```sh
    helm install my-app ./charts/my-app
    ```
 
 ---
-## **Long-Term Vision**
+## **Long-term vision**
 This project is intended to serve as a complete cloud-native DevOps environment, with plans to:
 ✅ Integrate AI-powered log anomaly detection for proactive incident response.
 ✅ Automate CI/CD pipelines for seamless Kubernetes deployments.
 ✅ Implement observability tooling (Prometheus, Loki, Grafana).
 ✅ Showcase a real-world production architecture.
 
-### Why This Matters
+### Why this matters
 I have plans, grand plans, this servers as a template for clusters that I will service applciations on. Additionally, it’s about demonstrating production-ready DevOps automation, scalability, and cloud-native best practices. 
+
+### Why a public repo?
+In order to show my ongoing work. I simply don't care if my iterative processes is visible, and im pretty sure nothing sensitive is currently stored in git.
+
 
 ---
 ### *Written by LcncRoot with AI assitance*
