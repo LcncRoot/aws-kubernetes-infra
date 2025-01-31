@@ -1,7 +1,7 @@
 # AWS Kubernetes Infrastructure
 
 ## **Project Overview**
-This repository demonstrates a **fully automated, scalable Kubernetes infrastructure** deployed on AWS. It is designed as **practical cloud-native architecture**, serving as a template for future use cases, leveraging:
+This repository demonstrates a fully automated, scalable Kubernetes infrastructure** deployed on AWS. It is designed as **practical cloud-native architecture serving as a template for future use cases, leveraging:
 
 - **Terraform** for Infrastructure as Code (IaC)
 - **AWS EKS** (Elastic Kubernetes Service) for cluster management
@@ -34,7 +34,7 @@ This is not intended reductively as a local development playground—it is a int
    - Validate with `kubectl get nodes` and `kubectl get pods -A`.
 
 🔹 **Implement CI/CD Pipelines**
-   - Set up **GitHub Actions** for automatic deployments.
+   - Set up GitHub Actions for automatic deployments.
 
 🔹 **Deploy AI-Powered Log Anomaly Detection**
    - Develop and containerize an ML-based anomaly detection service.
@@ -72,14 +72,14 @@ This is not intended reductively as a local development playground—it is a int
 
 ---
 ## **Long-Term Vision**
-This project is intended to serve as a **complete cloud-native DevOps environment**, with plans to:
-✅ Integrate **AI-powered log anomaly detection** for proactive incident response.
-✅ Automate CI/CD pipelines for **seamless Kubernetes deployments**.
-✅ Implement **observability tooling** (Prometheus, Loki, Grafana).
-✅ Showcase a **real-world production architecture**.
+This project is intended to serve as a complete cloud-native DevOps environment, with plans to:
+✅ Integrate AI-powered log anomaly detection for proactive incident response.
+✅ Automate CI/CD pipelines for seamless Kubernetes deployments.
+✅ Implement observability tooling (Prometheus, Loki, Grafana).
+✅ Showcase a real-world production architecture.
 
-### **Why This Matters**
-This project is not just about deploying a home Kubernetes cluster—it’s about demonstrating **true DevOps automation, scalability, and cloud-native best practices**. If you’re an employer reviewing this, you’ll find that I can design, build, and manage **highly available, production-ready infrastructure**.
+### Why This Matters
+I have plans, grand plans, this servers as a template for clusters that I will service applciations on. Additionally, it’s about demonstrating production-ready DevOps automation, scalability, and cloud-native best practices. 
 
 ---
 ### *Written by LcncRoot with AI assitance*
