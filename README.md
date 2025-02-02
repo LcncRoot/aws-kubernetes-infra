@@ -78,13 +78,13 @@ Below is a sample README in Markdown format that includes the instructions:
 
 # Kubernetes Cluster Autoscaler Setup
 
-This guide provides step-by-step instructions to validate your Kubernetes cluster, set up Helm, deploy the Cluster Autoscaler, and simulate a load test to trigger autoscaling.
+Validate your Kubernetes cluster, set up Helm, deploy the Cluster Autoscaler, and simulate a load test to trigger autoscaling.
 
 ---
 
 ## 1. Cluster Validation
 
-Ensure your cluster is healthy and all system pods are running.
+Ensure cluster is healthy and all system pods are running.
 
 ```bash
 # List all nodes
@@ -117,7 +117,7 @@ helm repo update
 
 ## 3. Install Cluster Autoscaler
 
-Deploy the Cluster Autoscaler into the `kube-system` namespace using Helm. Replace the `awsRegion` and `autoDiscovery.clusterName` values as needed.
+Deploy the Cluster Autoscaler into the `kube-system`, or whatever namespace youve created, using Helm. Replace the `awsRegion` and `autoDiscovery.clusterName` values as needed. 
 
 ```bash
 helm install cluster-autoscaler autoscaler/cluster-autoscaler \
@@ -129,7 +129,7 @@ helm install cluster-autoscaler autoscaler/cluster-autoscaler \
 
 ### Verify Deployment
 
-Check that the autoscaler pod is running:
+Check that autoscaler pod is running:
 
 ```bash
 kubectl get pods -n kube-system
