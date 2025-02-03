@@ -1,0 +1,5 @@
+## For repeatability, here is the namespace for gitlab
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gitlab

@@ -1,0 +1,9 @@
+global:
+  hosts:
+    domain: gitlab.3.92.26.153.nip.io
+certmanager:
+  install: false
+certmanager-issuer:
+  email: dougdawsroot1@gmail.com
+
+
