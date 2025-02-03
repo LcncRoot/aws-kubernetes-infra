@@ -1,0 +1,14 @@
+#  tells GitLab how to build, test, and deploy  code automatically
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  image: bitnami/kubectl:latest
+  script:
+    - aws eks update-kubeconfig --name aws-kubernetes-cluster --region us-east-1
+    - helm upgrade --install gitlab gitlab/gitlab --namespace gitlab -f gitlab-values.yaml
+    - kubectl apply -f gitlab-ingress.yaml
+  only:
+    - main
