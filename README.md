@@ -212,6 +212,34 @@ Leveraging a container-native deployment aligns with best practices in modern De
 
 In summary, deploying GitLab within our Kubernetes cluster is both a practical and strategic choice that supports our current scale and growth objectives, without incurring unnecessary overhead or resource conflicts.
 
+Below is an example writeup you could include in your README. It explains the process you used to calculate costs and determine resource optimization when selecting the appropriate AWS instance types for a GitLab deployment:
+
+---
+
+### General Cost and Resource Optimization Analysis
+
+This section will be updated as the project progresses. In my deployment planning for GitLab on AWS EKS, I performed a brief analysis to balance performance, resource availability, and cost:
+
+1. **Assessing GitLab Resource Requirements:**
+   - I reviewed the resource requests and usage from gitLab components (web service, Sidekiq, and auxiliary services).
+   - For example, the GitLab web service was observed to request approximately 400 m CPU and around 2.6 GB of memory, while Sidekiq was using close to 900 m CPU and 2 GB of memory.
+
+2. **Evaluating AWS Instance Options:**
+   - **t3.medium:** Offers 2 vCPUs and 4 GB of memory at a lower cost (~\$0.0416/hour). However, the limited memory and CPU made it less ideal for a production GitLab environment with multiple resource-intensive services.
+   - **t3.large:** Doubles the memory to 8 GB while keeping the same 2 vCPUs (~\$0.0832/hour). Although this improves memory capacity, the CPU remains limited, potentially causing bottlenecks under sustained load.
+   - **m5.xlarge:** Provides 4 vCPUs and 16 GB of memory (~\$0.192/hour), offering significantly more resources. This instance type also offers non-burstable performance, which is crucial for a production workload that requires consistent performance.
+
+3. **Cost Comparison and Final Decision:**
+   - Using cost estimates for a 10-hour period:
+     - **4 t3.large nodes:** Approximately \$3.33 for nodes + \$1 for the EKS control plane, totaling roughly \$4.33.
+     - **2 m5.xlarge nodes:** Approximately \$0.192/hour each, yielding a combined cost of around \$0.384 per hour. For 10 hours, this is about \$3.84 for nodes plus the same \$1 for the control plane, totaling roughly \$4.84.
+   - Although the total cost difference between the two configurations is marginal, the m5.xlarge nodes provide:
+     - **Double the vCPUs (4 vs. 2)** for better handling of concurrent tasks.
+     - **Significantly more memory (16 GB vs. 8 GB)**, which is critical given GitLab's higher memory usage.
+     - **Non-burstable performance,** ensuring consistent and reliable operation even under sustained load.
+   - Considering these factors, the decision was made to deploy GitLab on a cluster of **2 m5.xlarge nodes**. This configuration not only meets GitLab’s resource demands but also leaves ample headroom for running additional applications on the same cluster.
+
+---
 
 
 ---
