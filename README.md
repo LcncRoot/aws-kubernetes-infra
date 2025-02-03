@@ -192,9 +192,7 @@ kubectl delete pod resource-hog
 ---
 ## Gitlab
 
-By following these steps, you can verify your cluster's health, deploy the Cluster Autoscaler with Helm, and simulate load to test autoscaling functionality.
-
-**Why Deploy GitLab Within Our Kubernetes Cluster?
+**Why Deploy GitLab Within Our Kubernetes Cluster?**
 
 https://www.reddit.com/r/kubernetes/comments/154n1la/should_i_run_gitlab_on_a_droplet_or_in_a_cluster/
 https://www.reddit.com/r/devops/comments/nzi9mp/do_you_run_gitlab_inside_k8s_cluster_how_is_your/
@@ -204,7 +202,7 @@ I had a somewhat long internal debate deciding which way to go with this, but fo
 1. Unified Infrastructure:
 Deploying GitLab in-cluster allows me to manage my CI/CD tooling alongside our production workloads in a single environment.
 
-2. Resource Efficiency:
+**2. Resource Efficiency:**
 Given the modest scale of our operation, resource contention is not a significant concern. Our expected workload is light, meaning the existing cluster’s resources are more than sufficient to support GitLab without adversely affecting other applications. It would be **more** resource intensive at this juncture to deploy it elsewhere on separate infrastructure.
 
 By avoiding the need to provision and manage a separate infrastructure for GitLab, we reduce complexity and associated costs. This allows us to focus our resources on enhancing our core applications and services.
