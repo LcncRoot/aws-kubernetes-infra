@@ -203,12 +203,8 @@ resource "aws_eks_node_group" "node_group" {
   }
 
   ami_type       = "AL2_x86_64"
-  instance_types = ["t3.micro"]
+  instance_types = ["t3.medium"]
   capacity_type  = "SPOT"
-
-  remote_access {
-    ec2_ssh_key = var.eks_ssh_key  # Ensure you have a key pair in AWS
-  }
 
   depends_on = [
     aws_iam_role_policy_attachment.eks_worker_node_policy,
